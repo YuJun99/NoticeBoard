@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    body{
+    background-color: #26394E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+h1 {
+    font-size: 50px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.id-pw{
+    width: 150px;
+    font-size: 20px;
+}
+.id-pw input{
+    width: 100%;
+    padding: 1px 10px 10px;
+    background-color: #26394E;
+    border: none;
+    border-bottom: 1px solid #6e6e6e;
+    font-size: 15px; color: whitesmoke;
+    outline-width: 0px;
+}
+.button {margin-top: 10px; margin-left: -75px;}
+.button button{
+    width: 300%;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.id-pw label{
+    color: whitesmoke;
+}
+.caption{
+    margin-top: 2%;
+    padding-left: 20px;
+
+}
+#forgot{
+    color: bisque;
+    text-decoration: none;
+    border: 1px solid ;
+}
+.Facebook{
+    height: auto;
+    width: auto;
+    margin-top: 3%;
+}
+li{
+    list-style-type: none;
+    float: left;
+}
+a {
+    padding: 8px 20px;
+}
+.shape{
+    width: 0px;
+    height: 0px;
+    border-top: 0px solid transparent;
+    border-right: 400px solid transparent;
+    border-bottom: 800px solid transparent;
+    border-left: 840px solid #FED057;
+    position: absolute;
+    padding-right: 19%;
+    z-index: -1;
+}
+</style>
+<body>
+    <div class="shape"></div>
+    <h1>Welcome!</h1>
+    <div class="id-pw">
+        <label for="id">ID</label>
+        <input type="text" name = "id" id="id" autocomplete="off" required >
+    </div>
+    <div class="id-pw">
+        <label for="pw">PASSWORD</label>
+        <input type="password" name = "pw" id="pw" autocomplete="off" required>
+    </div>
+    <div class="button">
+        <button type="submit">Login</button>
+    </div>
+    <div class="caption">
+        <a id="forgot" href="">Forgot password?</a>
+    </div>
+
+    <ul class="Facebook">
+        <li><a href="http://facebook.com"><img th:src="@{/image/facebook.png}" width="50"></a></li>
+        <li><a href="http://instagram.com"><img th:src="@{/image/Insta.png}" width="50"></a></li>
+        <li><a href="http://github.com"><img th:src="@{/image/Github.png}" width="50"></a></li>
+    </ul>
+    
+</body>
+<script>
+
+</script>
+</html>
