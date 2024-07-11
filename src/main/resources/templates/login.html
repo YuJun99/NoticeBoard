@@ -56,6 +56,11 @@ h1 {
     text-decoration: none;
     border: 1px solid ;
 }
+#signupform{
+	color: bisque;
+	text-decoration: none;
+	border: 1px solid;
+}
 .Facebook{
     height: auto;
     width: auto;
@@ -95,9 +100,9 @@ a {
         <button type="submit">Login</button>
     </div>
     <div class="caption">
+    	<a id="signupform" th:href="@{/user/signupform}">Sign up</a>
         <a id="forgot" href="">Forgot password?</a>
     </div>
-
     <ul class="Facebook">
         <li><a href="http://facebook.com"><img th:src="@{/image/facebook.png}" width="50"></a></li>
         <li><a href="http://instagram.com"><img th:src="@{/image/Insta.png}" width="50"></a></li>
