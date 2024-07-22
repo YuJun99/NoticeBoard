@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>/posts/list.html</title>
+</head>
+<body>
+	<div class="container">
+		<table>
+			<thead>
+				<tr>
+					<th>작성일</th>
+					<th>작성자</th>
+					<th>제목</th>
+					<th>조회수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="tmp : ${list}">
+					<td th:text="${tmp.regdate}"></td>
+					<td th:text="${tmp.author}"></td>
+					<td th:text="${tmp.title}"></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

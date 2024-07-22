@@ -10,6 +10,6 @@
 	<insert id="insert" parameterType="com.example.noticeboard.dto.UserDto">
 		INSERT INTO user_table
 		(id, userName, nickName, password, email, regdate)
-		VALUES (user_seq, #{userName}, #{nickName}, #{password}, #{email}, SYSDATE)
+		VALUES (#{id }, #{userName}, #{nickName}, #{password}, #{email}, SYSDATE)
 	</insert>
 </mapper>

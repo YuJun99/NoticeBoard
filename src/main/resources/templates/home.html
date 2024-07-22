@@ -35,9 +35,9 @@ h1 {
     font-size: 15px; color: whitesmoke;
     outline-width: 0px;
 }
-.button {margin-top: 10px; margin-left: -75px;}
+.button {margin-top: 10px; margin-left: 10px; margin-right: 0px;}
 .button button{
-    width: 300%;
+    width: 150px;
     height: 35px;
     border-radius: 25px;
     border: 1px solid;
@@ -88,26 +88,29 @@ a {
 <body>
     <div class="shape"></div>
     <h1>Welcome!</h1>
-    <div class="id-pw">
-        <label for="id">ID</label>
-        <input type="text" name = "id" id="id" autocomplete="off" required >
-    </div>
-    <div class="id-pw">
-        <label for="pw">PASSWORD</label>
-        <input type="password" name = "pw" id="pw" autocomplete="off" required>
-    </div>
-    <div class="button">
-        <button type="submit">Login</button>
-    </div>
-    <div class="caption">
-    	<a id="signupform" th:href="@{/user/signupform}">Sign up</a>
-        <a id="forgot" href="">Forgot ID/PW?</a>
-    </div>
-    <ul class="Facebook">
-        <li><a href="http://facebook.com"><img th:src="@{/image/facebook.png}" width="50"></a></li>
-        <li><a href="http://instagram.com"><img th:src="@{/image/Insta.png}" width="50"></a></li>
-        <li><a href="http://github.com"><img th:src="@{/image/Github.png}" width="50"></a></li>
-    </ul>
+    <form th:action="@{/post/list}" method="post">
+    	<div class="id-pw">
+	        <label for="id">ID</label>
+	        <input type="text" name = "id" id="id" autocomplete="off" required >
+	    </div>
+	    <div class="id-pw">
+	        <label for="pw">PASSWORD</label>
+	        <input type="password" name = "pw" id="pw" autocomplete="off" required>
+	    </div>
+	    <div class="button">
+	        <button type="submit">Login</button>
+	    </div>
+    </form>
+	    
+	    <div class="caption">
+	    	<a id="signupform" th:href="@{/user/signupform}">Sign up</a>
+	        <a id="forgot" href="">Forgot ID/PW?</a>
+	    </div>
+	    <ul class="Facebook">
+	        <li><a href="http://facebook.com"><img th:src="@{/image/facebook.png}" width="50"></a></li>
+	        <li><a href="http://instagram.com"><img th:src="@{/image/Insta.png}" width="50"></a></li>
+	        <li><a href="http://github.com"><img th:src="@{/image/Github.png}" width="50"></a></li>
+	    </ul>
     
 </body>
 <script>
